@@ -18,9 +18,21 @@ To use this plugin you must first require() it:
 var sound = require("nativescript-sound");
 ```
 
-### play
+### create and play
 
 ```js
 var tada = sound.create("~/sounds/tada.mp3");
 tada.play();
+```
+
+### stop
+
+```js
+tada.stop();
+```
+
+### reset
+
+```js
+tada.reset();
 ```
