@@ -5,16 +5,16 @@ var Sound = (function (_super) {
     function Sound() {
         _super.apply(this, arguments);
 
-        this._player = new android.media.MediaPlayer();
-        this._player.setAudioStreamType(android.media.AudioManager.STREAM_MUSIC);
-        this._player.setDataSource(this._path);
-        this._player.prepareAsync();
+        this._player = new android.media.SoundPool(1, android.media.AudioManager.STREAM_MUSIC, 0);
+        this._soundId = this._player.load(this._path, 1);
     }
     Sound.prototype.play = function () {
-        this._player.start();
+        this._player.play(this._soundId, 1.0, 1.0, 1, 0, 1.0);
+    };
+    Sound.prototype.stop = function () {
+        this._player.stop(this._soundId);
     };
     Sound.prototype.reset = function () {
-        this._player.reset();
     };
     return Sound;
 })(common.Sound);

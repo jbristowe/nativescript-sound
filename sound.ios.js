@@ -13,6 +13,9 @@ var Sound = (function (_super) {
     Sound.prototype.play = function () {
         this._player.play();
     };
+    Sound.prototype.stop = function () {
+        this._player.stop();
+    };
     Sound.prototype.reset = function () {
         this._player.stop();
         this._player.prepareToPlay();
