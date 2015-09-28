@@ -1,6 +1,6 @@
 {
   "name": "nativescript-sound",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Play a sound in your NativeScript app",
   "main": "sound.js",
   "nativescript": {
