@@ -8,7 +8,6 @@ var Sound = (function () {
             var fileName = types.isString(path) ? path.trim() : "";
 
             if (fileName.indexOf("~/") === 0) {
-                console.log(fileName);
                 fileName = fs.path.join(fs.knownFolders.currentApp().path, fileName.replace("~/", ""));
             }
             
