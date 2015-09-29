@@ -20,8 +20,12 @@ var sound = require("nativescript-sound");
 
 ### create and play
 
+It's important to preload the audio file into the **sound** module before playing it; there is a delay during creation due to the audio being processed.
+
 ```js
-var tada = sound.create("~/sounds/tada.mp3");
+var tada = sound.create("~/sounds/tada.mp3"); // preload the audio file
+
+// play the sound (i.e. tap event handler)
 tada.play();
 ```
 
